@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>勉強計画メーカー</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📚 勉強計画メーカー</h1>
+
+    <form id="startDateForm">
+      <label for="startDate">学習開始日:</label>
+      <input type="date" id="startDate" required />
+      <button type="submit">📅 開始日を設定</button>
+    </form>
+
+    <form id="taskForm">
+      <div class="form-group">
+        <label for="day">何日目に実施するか:</label>
+        <input type="number" id="day" min="1" required />
+      </div>
+
+      <div class="form-group">
+        <label for="subject">教科:</label>
+        <input type="text" id="subject" required />
+      </div>
+
+      <div class="form-group">
+        <label for="details">勉強内容:</label>
+        <input type="text" id="details" required />
+      </div>
+
+      <button type="submit">📌 追加</button>
+    </form>
+
+    <h2>🗓️ 勉強計画一覧</h2>
+    <ul id="planList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
